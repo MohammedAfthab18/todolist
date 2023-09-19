@@ -1,0 +1,113 @@
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.App-header {
+  background-color: #61dafb;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.addTask {
+  background-color: dodgerblue;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  width: 300px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.task {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: flex;
+  margin: 15px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.task-text {
+  font-size: 1.2rem;
+}
+
+.delete-button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover,
+.delete-button:hover {
+  background-color: #ff5252;
+}
+/* Define the glitter animation */
+@keyframes glitter {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(5deg) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the completed tasks */
+.task.completed {
+  animation: glitter 0.5s ease infinite; /* Apply the glitter animation */
+  background-color: gold; /* Change the background color for completed tasks */
+  color: #333; /* Change the text color for better visibility */
+}
